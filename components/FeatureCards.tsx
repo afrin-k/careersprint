@@ -1,9 +1,12 @@
 "use client";
-import React from 'react'
+import React from "react";
 import { useState } from "react";
 
 const useGradientHover = (circleSize = 256) => {
-  const [circlePosition, setCirclePosition] = useState({ x: -circleSize, y: -circleSize });
+  const [circlePosition, setCirclePosition] = useState({
+    x: -circleSize,
+    y: -circleSize,
+  });
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -19,7 +22,13 @@ const useGradientHover = (circleSize = 256) => {
     setCirclePosition({ x: -circleSize, y: -circleSize });
   };
 
-  return { circlePosition, isHovered, handleMouseMove, handleMouseEnter, handleMouseLeave };
+  return {
+    circlePosition,
+    isHovered,
+    handleMouseMove,
+    handleMouseEnter,
+    handleMouseLeave,
+  };
 };
 interface FeatureCardProps {
   title: string;
@@ -30,7 +39,13 @@ export const FeatureCard2: React.FC<FeatureCardProps> = ({
   title,
   subtitle,
 }) => {
-  const { circlePosition, isHovered, handleMouseMove, handleMouseEnter, handleMouseLeave } = useGradientHover();
+  const {
+    circlePosition,
+    isHovered,
+    handleMouseMove,
+    handleMouseEnter,
+    handleMouseLeave,
+  } = useGradientHover();
 
   return (
     <div
@@ -50,7 +65,9 @@ export const FeatureCard2: React.FC<FeatureCardProps> = ({
         ></div>
       )}
       <div className="flex flex-col">
-        <div className="text-center bg-gradient-to-r from-red-500 to-orange-400 text-white font-bold py-2 px-4 rounded-full ">{title}</div>
+        <div className="text-center bg-gradient-to-r from-red-500 to-orange-400 text-white font-bold py-2 px-4 rounded-full ">
+          {title}
+        </div>
         <p className="text-md mt-2 text-black">{subtitle}</p>
       </div>
     </div>

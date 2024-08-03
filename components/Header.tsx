@@ -1,5 +1,5 @@
 "use client";
-
+import { useRouter } from "next/navigation";
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -17,6 +17,10 @@ export const Header = () => {
   function toggleMenu() {
     setMenuOpen(!menuOpen);
   }
+  const router = useRouter();
+  const handleSubmit = () => {
+    void router.push("http://localhost:3000/signup");
+  };
   return (
     <header>
       <div className="fixed left-[4%] top-0 z-20 my-2 w-[92%] rounded-full bg-gray-900 py-2 lg:left-1/4 lg:mx-auto lg:w-1/2">
@@ -32,7 +36,10 @@ export const Header = () => {
                 </Link>
               ))}
             </div>
-            <button className="btn hidden lg:block px-4 py-2 text-sm hover:bg-none hover:bg-[#2F2F2F]">
+            <button
+              onClick={handleSubmit}
+              className="btn hidden rounded-xl text-white bg-gradient-to-r from-red-600 to-orange-500 lg:block px-4 py-2 text-sm hover:bg-none hover:bg-[#2F2F2F]"
+            >
               Join Us ⇲
             </button>
           </div>
@@ -48,7 +55,9 @@ export const Header = () => {
           </div>
 
           <div
-            className={`fixed top-0 h-screen w-3/4 bg-gray-900 p-10 duration-700 ease-in-out lg:hidden ${menuOpen ? "left-0 " : "left-[-100%]"}`}
+            className={`fixed top-0 h-screen w-3/4 bg-gray-900 p-10 duration-700 ease-in-out lg:hidden ${
+              menuOpen ? "left-0 " : "left-[-100%]"
+            }`}
           >
             <>
               <div className="flex w-full items-center justify-end">
@@ -68,8 +77,8 @@ export const Header = () => {
                     {link}
                   </Link>
                 ))}
-                <button className="my-6 rounded-full bg-gradient-to-tr from-[#ff3131] to-[#ff914d] px-3 py-2 font-montserrat text-sm font-semibold text-white hover:bg-none hover:bg-[#ff3131] lg:hidden">
-                  Download ⇲
+                <button onClick={handleSubmit} className="my-6 rounded-full bg-gradient-to-tr from-[#ff3131] to-[#ff914d] px-3 py-2 font-montserrat text-sm font-semibold text-white hover:bg-none hover:bg-[#ff3131] lg:hidden">
+                  Join Us ⇲
                 </button>
                 <h1 className="my-6 block cursor-pointer py-6 text-base font-semibold text-white lg:hidden">
                   CareerSprint
@@ -81,4 +90,4 @@ export const Header = () => {
       </div>
     </header>
   );
-}
+};
