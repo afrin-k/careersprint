@@ -32,7 +32,7 @@ export const Header = () => {
                 </Link>
               ))}
             </div>
-            <button className="btn hidden lg:block px-4 py-2 text-sm hover:bg-none hover:bg-[#0d8efc]">
+            <button className="btn hidden lg:block px-4 py-2 text-sm hover:bg-none hover:bg-[#2F2F2F]">
               Join Us ⇲
             </button>
           </div>

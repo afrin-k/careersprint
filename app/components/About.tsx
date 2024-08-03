@@ -1,6 +1,5 @@
-import aboutImage from "@/public/about.svg";
 import Image from "next/image";
-
+import "@/public/about.svg";
 
 export const About = () => {
   return (
@@ -8,7 +7,7 @@ export const About = () => {
       <div className="container">
         <div className="flex items-center justify-between px-32">
         <div className="h-auto w-[680px] justify-between items-center py-28 scale-125">
-          <Image src={aboutImage} alt="about" className=""/> 
+          <Image src="/about.svg" alt="" height={100} width={100} className=""/> 
         </div>
         <div className="md:w-[478px] flex flex-col items-center justify-around">
           <h2 className="font-ptserif font-bold text-black mt-6 text-5xl leading-normal">About <span className="text-transparent bg-gradient-to-b from-[#ff3131] to-[#ff914d] bg-clip-text">CareerSprint</span></h2>

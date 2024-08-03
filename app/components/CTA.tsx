@@ -1,4 +1,4 @@
-import ctaImage from "@/public/cta.svg";
+import "@/public/cta.svg";
 import Image from "next/image";
 
 export const CTA = () => {
@@ -7,7 +7,7 @@ export const CTA = () => {
       <div className="container">
         <div className="flex items-center justify-between md:px-36">
         <div className="hidden md:block justify-between items-center scale-110 py-10 md:py-28">
-          <Image src={ctaImage} alt="usp" className=""/> 
+        <Image src="/cta.svg" alt="" height={100} width={100} className=""/> 
         </div>
         <div className="lg:w-[478px] flex flex-col px-8 gap-4 items-center justify-between">
            <h2 className="font-ptserif font-bold text-center text-white mt-6 text-5xl leading-tight">Ready To Sprint <br/> Towards <br/> Your Career Goals?</h2>
