@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 @layer base {
   :root {
@@ -31,6 +35,7 @@
     --chart-5: 27 87% 67%;
   }
 
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -59,6 +64,7 @@
   }
 }
 
+
 @layer base {
   * {
     @apply border-border;
@@ -67,3 +73,37 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+  @layer components{
+    .btn{
+      @apply rounded-3xl text-white font-semibold font-montserrat text-base hover:bg-none hover:bg-[#ff3131] bg-gradient-to-r from-[#ff3131] to-[#ff914d];
+    }  
+
+
+    .para{
+      @apply font-montserrat pt-4 text-center;
+    }
+
+
+    .home-btn{
+      @apply text-lg font-bold font-abeezee text-black;
+    }
+
+
+    .section-body{
+      @apply bg-gradient-to-r from-[#ff3131] to-[#ff914d] rounded-3xl h-[200px] w-[900px]  items-start justify-between flex flex-row;
+    }
+
+
+    .section-text{
+      @apply font-abeezee text-white font-bold text-lg px-6 py-5;
+    }
+
+
+    .section-img{
+      @apply z-10 h-[200px] w-[200px];
+    }
+
+
+  }

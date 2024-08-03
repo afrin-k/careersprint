@@ -26,7 +26,7 @@ export const Header = () => {
       <div className="fixed left-[4%] top-0 z-20 my-2 w-[92%] rounded-full bg-gray-900 py-2 lg:left-1/4 lg:mx-auto lg:w-1/2">
         <nav className="mx-auto flex w-[92%] items-center justify-between">
           <div className="flex w-full flex-row items-center justify-between lg:mx-auto">
-            <h1 className="text-base cursor-pointer font-semibold text-white">
+            <h1 className="text-base font-montserrat cursor-pointer font-semibold text-white">
               CareerSprint
             </h1>
             <div className="relative mt-0 hidden space-y-1 p-0 font-montserrat font-medium lg:block">
@@ -38,7 +38,7 @@ export const Header = () => {
             </div>
             <button
               onClick={handleSubmit}
-              className="btn hidden rounded-xl text-white bg-gradient-to-r from-red-600 to-orange-500 lg:block px-4 py-2 text-sm hover:bg-none hover:bg-[#2F2F2F]"
+              className="btn hidden lg:block px-4 py-2 btn"
             >
               Join Us ⇲
             </button>
