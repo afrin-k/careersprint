@@ -19,8 +19,8 @@ export default function Login() {
     void router.push("http://localhost:3000/login")
   }
   return (
-    <div className="w-full max-w-md items-center justify-center">
-      <form>
+    <div className="w-full  max-w-md items-center justify-center">
+      <form className="">
         <Card>
           <CardHeader className="space-y-1">
             <CardTitle className="text-3xl font-bold">Login</CardTitle>

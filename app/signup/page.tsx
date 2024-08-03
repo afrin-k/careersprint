@@ -21,7 +21,7 @@ export default function Signup() {
     void router.push("http://localhost:3000/login")
   }
   return (
-    <div className="w-full max-w-md">
+    <div className="w-full h-full max-w-md">
       <form>
         <Card>
           <CardHeader className="space-y-1">
