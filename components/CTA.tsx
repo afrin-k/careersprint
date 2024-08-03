@@ -1,7 +1,13 @@
+"use client"
 import ctaImage from "@/public/cta.svg";
 import Image from "next/image";
 
+import { useRouter } from "next/navigation";
 export const CTA = () => {
+  const router = useRouter();
+  const handleSubmit = () => {
+    void router.push("http://localhost:3000/signup");
+  };
   return (
     <section className="pt-8 pb-10 lg:pt-5 lg:pb-10 bg-black md:h-screen ">
       <div className="container">
@@ -23,7 +29,7 @@ export const CTA = () => {
               unlocking your potential and achieving success in the job market.
             </p>
             <div className="flex items-center gap-1 mt-[30px]">
-              <button className="btn px-8 py-3 text-l hover:bg-none hover:bg-[#ff3131]">
+              <button className="btn px-8 py-3 text-l hover:bg-none hover:bg-[#ff3131]" onClick={handleSubmit}>
                 Get Started Now
               </button>
             </div>
