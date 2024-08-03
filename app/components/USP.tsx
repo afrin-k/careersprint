@@ -1,7 +1,6 @@
 import uspImage from "@/public/usp.svg";
 import Image from "next/image";
 
-
 export const USP = () => {
   return (
     <section className="pt-8 pb-20 md:pt-5 md:pb-10 bg-white h-screen overflow-hidden">

@@ -1,9 +1,9 @@
 import { FeatureCard2 } from "../components/FeatureCards";
 export default function Features() {
     return (
-      <div className="">
+      <div className="pt-8 pb-20 md:pt-5 md:pb-10 mt-[-100px] bg-white h-screen overflow-hidden">
             
-            <h2 className="text-center font-ptserif font-bold text-black text-7xl leading-normal">Our <span className="text-transparent bg-gradient-to-b from-[#ff3131] to-[#ff914d] bg-clip-text">Features</span></h2>
+            <h2 className="text-center font-ptserif font-bold text-black text-5xl leading-normal">Our <span className="text-transparent bg-gradient-to-b from-[#ff3131] to-[#ff914d] bg-clip-text">Features</span></h2>
       
       <div className="mx-auto max-w-screen-lg p-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">

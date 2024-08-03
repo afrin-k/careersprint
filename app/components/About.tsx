@@ -1,17 +1,17 @@
 import Image from "next/image";
-import "@/public/about.svg";
+import aboutImage from "@/public/about.svg";
 
 export const About = () => {
   return (
-    <section className="pt-8 pb-20 md:pt-5 md:pb-10 bg-white h-screen overflow-hidden">
+    <section className="pt-10 pb-20 md:pt-5 md:pb-20 bg-white h-screen overflow-hidden">
       <div className="container">
-        <div className="flex items-center justify-between px-32">
-        <div className="h-auto w-[680px] justify-between items-center py-28 scale-125">
-          <Image src="/about.svg" alt="" height={100} width={100} className=""/> 
+        <div className="flex items-center justify-between pt-20 px-32">
+        <div className="h-auto w-[600px] justify-between items-center pt-20 scale-125">
+          <Image src={aboutImage} alt="about" className=""/> 
         </div>
         <div className="md:w-[478px] flex flex-col items-center justify-around">
           <h2 className="font-ptserif font-bold text-black mt-6 text-5xl leading-normal">About <span className="text-transparent bg-gradient-to-b from-[#ff3131] to-[#ff914d] bg-clip-text">CareerSprint</span></h2>
-          <div className="w-[360px] h-[380px] border-2 border-black rounded-2xl mt-6">
+          <div className="w-[390px] h-[380px] border-2 border-black rounded-2xl mt-6">
             <div className="text-center">
               <p className="para">A survey by <span className="font-bold">Handshake</span> revealed <br/> that <span className="text-[#ff3131] font-bold">70%</span> of students <br/> were <span className="italic underline"> unsure about <br/> job market conditions</span> and <br/> how to effectively navigate them <br/> post-graduation.</p>
               <p className="para">If that sounds like you too... <br/>Welcome to <span className="text-[#ff3131] font-bold">CareerSprint</span>!</p>
