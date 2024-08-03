@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export const USP = () => {
   return (
-    <section className="pt-8 pb-20 md:pt-5 md:pb-10 bg-white h-screen overflow-hidden">
+    <section className="pb-20 md:pb-10 bg-white h-screen overflow-hidden">
       <div className="container">
         <div className="flex items-center justify-around px-48 py-20">
-        <div className="md:w-[478px] flex flex-col justify-around">
+        <div className="md:w-[478px] flex flex-col justify-around pr-10">
           <h2 className="font-ptserif font-bold text-black mt-6 text-5xl leading-tight"><span className="text-transparent bg-gradient-to-b from-[#ff3131] to-[#ff914d] bg-clip-text">CareerSprint</span> : <br/> Your <br/> Competitive Edge</h2>
           <div className="w-[440px] h-[190px] border-2 border-black rounded-2xl mt-6">
             <div>
@@ -14,7 +14,7 @@ export const USP = () => {
             </div>
           </div>
         </div>
-        <div className="justify-between items-center scale-125">
+        <div className="justify-between items-center scale-125 pl-10">
           <Image src={uspImage} alt="usp" className=""/> 
         </div>
       </div>

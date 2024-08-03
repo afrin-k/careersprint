@@ -49,7 +49,7 @@ export const FeatureCard2: React.FC<FeatureCardProps> = ({
 
   return (
     <div
-      className="relative overflow-hidden rounded-3xl border-4 border-gradient-to-r from-red-500 to-orange-400 bg-white p-6 hover:border-red-600"
+      className="relative overflow-hidden rounded-3xl border-4 border-gray-500 border-gradient-to-r from-red-500 to-orange-400 bg-white p-6 hover:border-red-600"
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -68,7 +68,7 @@ export const FeatureCard2: React.FC<FeatureCardProps> = ({
         <div className="text-center bg-gradient-to-r from-red-500 to-orange-400 text-white font-bold py-2 px-4 rounded-full ">
           {title}
         </div>
-        <p className="text-md mt-2 text-black">{subtitle}</p>
+        <p className="text-md mt-2 text-black text-center py-20">{subtitle}</p>
       </div>
     </div>
   );

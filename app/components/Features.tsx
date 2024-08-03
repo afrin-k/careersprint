@@ -2,7 +2,7 @@
 import { FeatureCard2 } from "../components/FeatureCard";
 export const Features = () => {
   return (
-    <div className="pt-8 pb-20 md:pt-5 md:pb-10 mt-[-100px] bg-white h-screen overflow-hidden">
+    <div className="pt-8 pb-20 md:pt-20 mt-[-100px] bg-white h-screen overflow-hidden">
       <h2 className="text-center font-ptserif font-bold text-black text-5xl leading-normal">
         Our{" "}
         <span className="text-transparent bg-gradient-to-b from-[#ff3131] to-[#ff914d] bg-clip-text">
@@ -10,8 +10,8 @@ export const Features = () => {
         </span>
       </h2>
 
-      <div className="mx-auto max-w-screen-lg p-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+      <div className="mx-auto max-w-screen-lg p-4 pt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 h-[400px]">
           <FeatureCard2
             title={"Learning Paths"}
             subtitle={
