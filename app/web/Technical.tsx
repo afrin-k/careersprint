@@ -23,9 +23,7 @@ export const Technical = () => {
 
             </div>
             <div className='flex flex-col h-screen w-[300px] border-l-2 border-gray-400 items-center justify-around gap-6 py-10 px-10'>
-                <div className='border-4 border-gray-500 h-[260px] w-[260px]'></div>
-                <div className='border-4 border-gray-500 h-[260px] w-[260px]'></div>   
-                <div className='border-4 border-gray-500 h-[260px] w-[260px]'></div>
+                
             </div>      
         </div>
       </div>

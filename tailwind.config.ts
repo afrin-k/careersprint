@@ -1,4 +1,6 @@
+import { ABeeZee, Montserrat, PT_Serif } from "next/font/google"
 import type { Config } from "tailwindcss"
+
 
 const config = {
   darkMode: ["class"],
@@ -7,9 +9,14 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
+    fontFamily:{
+      "montserrat":["Montserrat","sans-serif"],
+      "ptserif":["PT_Serif","serif"],
+      "abeezee":["ABeeZee","sans-serif"]
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -76,5 +83,6 @@ const config = {
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config
+
 
 export default config
