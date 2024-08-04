@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
@@ -15,19 +16,42 @@ import { Input } from "../components/ui/input";
 
 export default function Signup() {
   const router = useRouter();
-  const handleSubmitLogin = () => {
-    void router.push("http://localhost:3000/login");
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    password: ""
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = () => {
+    // Create the JSON object
+    const signupData = {
+      username: formData.username,
+      email: formData.email,
+      password: formData.password
+    };
+
+    console.log("Sign-Up Data:", signupData);
+
+    // Add your logic here to handle form submission, like making an API request
+
+    // Redirect to login page
+    void router.push("/login");
   };
 
   return (
     <div className="flex items-center justify-center min-h-screen ">
       <div className="w-full max-w-5xl shadow-2xl shadow-black rounded-lg">
-        
-          
-          <Card className="flex">
+        <Card className="flex">
           <div className="w-1/2 ml-4">
             <img
-              src="login.svg" 
+              src="login.svg"
               alt="Login Image"
               className="w-full h-full object-cover"
             />
@@ -47,6 +71,7 @@ export default function Signup() {
                   name="username"
                   type="text"
                   placeholder="username"
+                  onChange={handleChange}
                 />
               </div>
               <div className="space-y-2">
@@ -56,9 +81,9 @@ export default function Signup() {
                   name="email"
                   type="email"
                   placeholder="name@example.com"
+                  onChange={handleChange}
                 />
               </div>
-
               <div className="space-y-2">
                 <Label htmlFor="password">Password</Label>
                 <Input
@@ -66,22 +91,24 @@ export default function Signup() {
                   name="password"
                   type="password"
                   placeholder="password"
+                  onChange={handleChange}
                 />
               </div>
             </CardContent>
             <CardFooter className="flex flex-col">
-              <button className="w-full">Sign Up</button>
+              <button className="w-full" onClick={handleSubmit}>
+                Sign Up
+              </button>
               <div className="mt-4 text-center text-sm">
-            Have an account?
-            <Link className="underline ml-2" onClick={handleSubmitLogin} href="login">
-              Login
-            </Link>
-          </div>
+                Have an account?
+                <Link className="underline ml-2" href="/login">
+                  Login
+                </Link>
+              </div>
             </CardFooter>
-            </div>
-            </Card>
+          </div>
+        </Card>
       </div>
-      
     </div>
   );
 }

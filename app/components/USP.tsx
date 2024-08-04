@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const USP = () => {
   return (
-    <section className="pb-20 md:pb-10 bg-white h-screen overflow-hidden">
+    <section className="md:pb-10 bg-white h-screen overflow-hidden">
       <div className="container">
         <div className="flex items-center justify-around px-48 py-20">
         <div className="md:w-[478px] flex flex-col justify-around pr-10">

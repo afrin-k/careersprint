@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export const About = () => {
   return (
-    <section className="pt-8 pb-20 md:pt-5 md:pb-10 bg-white h-screen overflow-hidden">
-      <div className="container">
-        <div className="flex items-center justify-between px-14">
-        <div className="h-auto w-[680px] justify-between items-center py-32 scale-100">
+    <section className="pb-12 bg-white overflow-hidden pt-10 ">
+      <div>
+        <div className="flex items-center justify-between px-14 ">
+        <div className="h-auto w-[680px] justify-between items-center scale-100">
           <Image src={aboutImage} alt="about" className=""/> 
         </div>
         <div className="md:w-[478px] flex flex-col items-center justify-around">

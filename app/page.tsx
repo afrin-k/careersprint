@@ -18,8 +18,7 @@ export default function Home() {
       <USP />
       <CTA />
       <Footer />
-      <Homie/>
-      <Technical/>
+      
     </>
   );
 }

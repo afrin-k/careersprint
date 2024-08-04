@@ -19,7 +19,7 @@ export const Header = () => {
   }
   const router = useRouter();
   const handleSubmit = () => {
-    void router.push("http://localhost:3000/signup");
+    void router.push("/signup");
   };
   return (
     <header>
@@ -77,7 +77,10 @@ export const Header = () => {
                     {link}
                   </Link>
                 ))}
-                <button onClick={handleSubmit} className="my-6 rounded-full bg-gradient-to-tr from-[#ff3131] to-[#ff914d] px-3 py-2 font-montserrat text-sm font-semibold text-white hover:bg-none hover:bg-[#ff3131] lg:hidden">
+                <button
+                  onClick={handleSubmit}
+                  className="my-6 rounded-full bg-gradient-to-tr from-[#ff3131] to-[#ff914d] px-3 py-2 font-montserrat text-sm font-semibold text-white hover:bg-none hover:bg-[#ff3131] lg:hidden"
+                >
                   Join Us ⇲
                 </button>
                 <h1 className="my-6 block cursor-pointer py-6 text-base font-semibold text-white lg:hidden">

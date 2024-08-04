@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
@@ -15,23 +16,48 @@ import { Input } from "../components/ui/input";
 
 export default function Login() {
   const router = useRouter();
+  const [formData, setFormData] = useState({
+    identifier: "",
+    password: ""
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = () => {
+    // Create the JSON object
+    const loginData = {
+      identifier: formData.identifier,
+      password: formData.password
+    };
+
+    console.log("Login Data:", loginData);
+
+    // Add your logic here to handle form submission, like making an API request
+
+    // Redirect to dashboard or home page after successful login
+    void router.push("/dashboard");
+  };
+
   const handleSubmitSignup = () => {
-    void router.push("http://localhost:3000/signup");
+    void router.push("/signup");
   };
 
   return (
     <div className="flex items-center justify-center min-h-screen ">
       <div className="w-full max-w-4xl shadow-2xl shadow-black rounded-lg">
         <Card className="flex">
-        
           <div className="w-1/2 ml-4">
             <img
-              src="login.svg" 
+              src="login.svg"
               alt="Login Image"
               className="w-full h-full object-cover"
             />
           </div>
-         
           <div className="w-1/2 p-8">
             <CardHeader className="space-y-1">
               <CardTitle className="text-3xl font-bold">Login</CardTitle>
@@ -47,6 +73,7 @@ export default function Login() {
                   name="identifier"
                   type="text"
                   placeholder="username or email"
+                  onChange={handleChange}
                 />
               </div>
               <div className="space-y-2">
@@ -56,15 +83,18 @@ export default function Login() {
                   name="password"
                   type="password"
                   placeholder="password"
+                  onChange={handleChange}
                 />
               </div>
             </CardContent>
             <CardFooter className="flex flex-col">
-              <button className="w-full">Login</button>
+              <button className="w-full" onClick={handleSubmit}>
+                Login
+              </button>
             </CardFooter>
             <div className="mt-4 text-center text-sm">
               Don't have an account?
-              <Link className="underline ml-2" onClick={handleSubmitSignup} href="signup">
+              <Link className="underline ml-2" onClick={handleSubmitSignup} href="/signup">
                 Sign Up
               </Link>
             </div>

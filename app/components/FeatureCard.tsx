@@ -68,7 +68,7 @@ export const FeatureCard2: React.FC<FeatureCardProps> = ({
         <div className="text-center bg-gradient-to-r from-red-500 to-orange-400 text-white font-bold py-2 px-4 rounded-full ">
           {title}
         </div>
-        <p className="text-md mt-2 text-black text-center py-20">{subtitle}</p>
+        <p className="text-md text-black text-center py-10">{subtitle}</p>
       </div>
     </div>
   );
