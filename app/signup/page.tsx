@@ -29,7 +29,7 @@ export default function Signup() {
     });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     // Create the JSON object
     const signupData = {
       username: formData.username,
@@ -38,6 +38,28 @@ export default function Signup() {
     };
 
     console.log("Sign-Up Data:", signupData);
+
+    try{
+      const resp = await fetch("http://localhost:8000/signup", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(signupData)
+      });
+
+      const result = await resp.json();
+      if(resp.ok){
+        void router.push("/web");
+      }
+      else{
+        alert(result.error)
+        console.log("Error has occured")
+      }
+    }
+    catch(error){
+      console.log(error)
+    }
 
     // Add your logic here to handle form submission, like making an API request
 

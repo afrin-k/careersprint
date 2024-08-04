@@ -28,19 +28,39 @@ export default function Login() {
     });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     // Create the JSON object
     const loginData = {
-      identifier: formData.identifier,
+      email: formData.identifier,
       password: formData.password
     };
 
     console.log("Login Data:", loginData);
 
+    try{
+      const resp = await fetch("http://localhost:8000/login", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(loginData)
+      });
+
+      const result = await resp.json();
+      if(resp.ok){
+        void router.push("/dashboard");
+      }
+      else{
+        alert(result.error)
+        console.log("Error has occured")
+      }
+    }
+    catch(error){
+      console.log(error)
+    }
     // Add your logic here to handle form submission, like making an API request
 
     // Redirect to dashboard or home page after successful login
-    void router.push("/dashboard");
   };
 
   const handleSubmitSignup = () => {
