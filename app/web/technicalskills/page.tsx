@@ -36,7 +36,7 @@ const Technical: React.FC = () => {
   };
 
   return (
-    <section className='min-h-screen bg-white'>
+    <section className='min-h-screen bg-white overflow-hidden'>
       <div className='flex'>        
         <WebBar/>
 

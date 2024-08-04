@@ -33,10 +33,10 @@ const Homie = () =>{
   return( 
      
     <section className='h-fit bg-white overflow-hidden'>
-      <h1 className='text-center text-5xl mt-6'>Hello, What do you wanna practise today?</h1>
+      <h1 className='font-montserrat font-bold text-[#ff3131] text-center mr-4 text-3xl mt-10 px-[280px]'>Hi there, what's your current focus for the day?</h1>
       <div className='flex flex-row'>
         <WebBar/>
-        <div className='flex flex-col items-center justify-start gap-6 py-28 px-[380px]'>
+        <div className='flex flex-col items-center justify-start gap-6 py-16 px-[380px]'>
           <div className='section-body'>
             <button className='section-text' onClick={technical}>SECTION 1 : TECHNICAL SKILLS</button>
             <Image src={section1Img} alt="section1" className='section-img'/>

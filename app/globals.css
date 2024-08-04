@@ -110,7 +110,7 @@
     }
 
     .ul-styles{
-      @apply list-none space-y-2 pl-8 w-[600px];
+      @apply list-none space-y-2 pl-8 w-[700px];
     }
 
     .checkbox-styles{

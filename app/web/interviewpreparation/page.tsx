@@ -1,5 +1,8 @@
 "use client";
 import React, { useState } from 'react';
+import mileStone from "@/public/milestoneicon.svg";
+import Image from 'next/image';
+import { WebBar } from '../WebBar';
 
 interface Task {
   label: string;
@@ -32,41 +35,34 @@ const InterviewPreparation: React.FC = () => {
   };
 
   return (
-    <section className='min-h-screen bg-white'>
-      <div className='flex'>
-        
-        <div className='h-screen w-[250px] border-r-2 border-gray-300 flex flex-col items-center justify-start gap-6 py-16 px-6'>
-          <button className='text-2xl font-semibold text-left text-[#ff3131] font-abeezee'>
-            CareerSprint
-          </button>
-          <button className='home-btn'>HOME</button>
-          <button className='home-btn'>SECTIONS</button>
-          <button className='home-btn'>PROGRESS</button>
-          <button className='home-btn'>PROFILE</button>
-          <button className='home-btn'>MORE</button>
-        </div>
+    <section className='min-h-screen bg-white overflow-hidden'>
+      <div className='flex'>        
+        <WebBar/>
 
-        <div className='flex-grow flex flex-col items-center py-16 px-8'>
+        <div className='flex-grow flex flex-col py-16 ml-[280px]'>
           
           <div className='flex items-center mb-8'>
-            <button className='text-2xl text-[#ff3131] mr-4'>{'<'} </button>
-            <div className='bg-gradient-to-r from-[#ff3131] to-[#ff914d] rounded-full py-2 px-8'>
-              <h1 className='text-white text-lg font-semibold'>
+            <div className='bg-gradient-to-r from-[#ff3131] to-[#ff914d] rounded-full py-2 px-8 mr-[108px] w-[700px]'>
+              <h1 className='text-white text-lg font-semibold font-abeezee'>
                 INTERVIEW PREPARATION
               </h1>
             </div>
           </div>
 
           
-          <div className='space-y-6 w-full max-w-lg mx-auto'>
+          <div className='space-y-6 w-full px-20 mx-auto'>
             <div>
-              <h2 className='text-lg font-bold text-[#ff3131] text-left'>RESEARCH THE COMPANY</h2>
-              <ul className='list-none space-y-1'>
+              <div className='flex flex-row'>
+                <Image src={mileStone} alt="mil" className="h-20 w-20"/>
+                <h2 className='section-headings'>RESEARCH THE COMPANY</h2>
+              </div>
+              <ul className='ul-styles'>
                 {companyResearchTasks.map((task, index) => (
-                  <li key={index} className='text-left'>
+                  <li key={index} className='ul-text'>
                     <input
                       type='checkbox'
                       checked={task.completed}
+                      className='checkbox-styles'
                       onChange={() => handleCheckboxChange(companyResearchTasks, setCompanyResearchTasks, index)}
                     /> {task.label}
                   </li>
@@ -75,13 +71,17 @@ const InterviewPreparation: React.FC = () => {
             </div>
 
             <div>
-              <h2 className='text-lg font-bold text-[#ff3131] text-left'>JOB ROLE</h2>
-              <ul className='list-none space-y-1'>
+            <div className='flex flex-row'>
+                <Image src={mileStone} alt="mil" className="h-20 w-20"/>
+                <h2 className='section-headings'>JOB ROLE</h2>
+              </div>
+              <ul className='ul-styles'>
                 {jobRoleTasks.map((task, index) => (
-                  <li key={index} className='text-left'>
+                  <li key={index} className='ul-text'>
                     <input
                       type='checkbox'
                       checked={task.completed}
+                      className='checkbox-styles'
                       onChange={() => handleCheckboxChange(jobRoleTasks, setJobRoleTasks, index)}
                     /> {task.label}
                   </li>
@@ -90,13 +90,17 @@ const InterviewPreparation: React.FC = () => {
             </div>
 
             <div>
-              <h2 className='text-lg font-bold text-[#ff3131] text-left'>TECHNICAL INTERVIEWS</h2>
-              <ul className='list-none space-y-1'>
+            <div className='flex flex-row'>
+                <Image src={mileStone} alt="mil" className="h-20 w-20"/>
+                <h2 className='section-headings'>TECHNICAL INTERVIEWS</h2>
+              </div>
+              <ul className='ul-styles'>
                 {technicalInterviewTasks.map((task, index) => (
-                  <li key={index} className='text-left'>
+                  <li key={index} className='ul-text'>
                     <input
                       type='checkbox'
                       checked={task.completed}
+                      className='checkbox-styles'
                       onChange={() => handleCheckboxChange(technicalInterviewTasks, setTechnicalInterviewTasks, index)}
                     /> {task.label}
                   </li>
@@ -106,22 +110,20 @@ const InterviewPreparation: React.FC = () => {
           </div>
         </div>
 
-        <div className='flex flex-col items-center justify-center w-[300px] border-l-2 border-gray-300'>
-          <div className='bg-white shadow-md rounded-md p-4'>
-            <div className='text-lg text-[#ff3131] font-bold'>💼 Interview Tips</div>
-            <div className='text-sm text-[#ff3131] font-semibold mt-2'>
-              Key points to remember before your interview!
-            </div>
-          </div>
-          <div className='bg-white shadow-md rounded-md p-4 mt-6'>
-            <img src='/path/to/image1.jpg' alt='Interview Tips 1' className='w-full h-auto mb-4'/>
-            <img src='/path/to/image2.jpg' alt='Interview Tips 2' className='w-full h-auto mb-4'/>
-            <img src='/path/to/image3.jpg' alt='Interview Tips 3' className='w-full h-auto'/>
+        
+        <div className='flex flex-col items-center justify-center pr-20'>
+          <div className='bg-white border-2 border-[#ff3131] rounded-3xl p-6 mt-6 text-center w-[250px] h-[400px]'>
+            <h2 className='font-abeezee font-extrabold text-base py-4 underline text-[#ff3131] '>INTERVIEW TIPS</h2>
+            <p className='text-sm font-semibold font-montserrat py-4'>Key points to remember before your interview : </p>
+            <p className='text-sm font-montserrat font-semibold text-black py-4'>Prepare for problem solving on the spot!</p>
+            <p className='text-sm font-montserrat font-semibold text-black py-4'>Map your skills to the Job Description!</p>
+            <p className='text-sm font-montserrat font-semibold text-black py-4'>Practice common questions!</p>
           </div>
         </div>
       </div>
     </section>
   );
 };
+
 
 export default InterviewPreparation;

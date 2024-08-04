@@ -16,7 +16,7 @@ export const WebBar = () => {
   };
   return (
     <section>
-        <div className='h-screen w-[250px] border-r-2 border-gray-300 flex flex-col items-left justify-start gap-6 py-16 px-6 fixed top-0 left-0'>
+        <div className='bg-white h-screen w-[250px] border-r-2 border-gray-300 flex flex-col items-left justify-start gap-6 py-16 px-6 fixed top-0 left-0'>
           <button className='text-2xl font-semibold text-left text-[#ff3131] font-abeezee'>
             CareerSprint
           </button>
