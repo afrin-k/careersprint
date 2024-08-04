@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 import { useState } from "react";
 
@@ -64,11 +65,11 @@ export const FeatureCard2: React.FC<FeatureCardProps> = ({
           }}
         ></div>
       )}
-      <div className="flex flex-col">
-        <div className="text-center bg-gradient-to-r from-red-500 to-orange-400 text-white font-bold py-2 px-4 rounded-full ">
+      <div className="flex flex-col items-center justify-between">
+        <div className="text-center bg-gradient-to-r from-red-500 to-orange-400 text-white font-bold py-2 px-4 rounded-full w-full ">
           {title}
         </div>
-        <p className="text-md text-black text-center py-10">{subtitle}</p>
+        <p className="text-md text-black text-center py-5">{subtitle}</p>
       </div>
     </div>
   );

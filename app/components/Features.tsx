@@ -1,5 +1,6 @@
 "use client";
 import { FeatureCard2 } from "../components/FeatureCard";
+
 export const Features = () => {
   return (
     <div className="mt-10 pb-20 md:pt-20  bg-white h-screen overflow-hidden">
@@ -11,7 +12,7 @@ export const Features = () => {
       </h2>
 
       <div className="mx-auto max-w-screen-lg p-4 pt-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-2 h-[300px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-2 h-[400px]">
           <FeatureCard2
             title={"Learning Paths"}
             subtitle={

@@ -26,7 +26,7 @@ export const Footer = () => {
           ))}
         </div>
         <div>
-          <Image src={logoImage} alt="logo" className="h-20 w-20" />
+          <Image src={logoImage} alt="logo" className="h-20 w-20 scale-150" />
         </div>
         <p className="text-base text-white font-montserrat">
           Copyright CareerSprint© 2024
