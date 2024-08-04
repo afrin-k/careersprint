@@ -32,7 +32,7 @@ export const Homie = () =>{
   };
   return( 
      
-    <section className='h-fit bg-white'>
+    <section className='h-fit bg-white overflow-hidden'>
       <div className='flex flex-row'>
         <WebBar/>
         <div className='flex flex-col items-center justify-start gap-6 py-28 px-[380px]'>
