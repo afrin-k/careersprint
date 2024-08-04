@@ -50,7 +50,7 @@ export default function Signup() {
 
       const result = await resp.json();
       if(resp.ok){
-        void router.push("/web");
+        void router.push("/web/home");
       }
       else{
         alert(result.error)
@@ -64,7 +64,7 @@ export default function Signup() {
     // Add your logic here to handle form submission, like making an API request
 
     // Redirect to login page
-    void router.push("/web");
+    void router.push("/web/home");
   };
 
   return (

@@ -48,7 +48,7 @@ export default function Login() {
 
       const result = await resp.json();
       if(resp.ok){
-        void router.push("/web");
+        void router.push("/web/home");
       }
       else{
         alert(result.error)
@@ -64,7 +64,7 @@ export default function Login() {
   };
 
   const handleSubmitSignup = () => {
-    void router.push("/web");
+    void router.push("/web/home");
   };
 
   return (

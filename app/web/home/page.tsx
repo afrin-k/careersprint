@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image';
 import React from 'react'
-import { WebBar } from './WebBar';
+import { WebBar } from '../WebBar';
 import section1Img from "@/public/section1.svg";
 import section2Img from "@/public/section2.svg";
 import section3Img from "@/public/section3.svg";
@@ -10,7 +10,7 @@ import section5Img from "@/public/section5.svg";
 import section6Img from "@/public/section6.svg";
 import section7Img from "@/public/section7.svg";
 import { useRouter } from 'next/navigation';
-export const Homie = () =>{ 
+const Homie = () =>{ 
   const router = useRouter();
   const technical = () => {
     void router.push("/web/technicalskills");
@@ -33,6 +33,7 @@ export const Homie = () =>{
   return( 
      
     <section className='h-fit bg-white overflow-hidden'>
+      <h1 className='text-center text-5xl mt-6'>Hello, What do you wanna practise today?</h1>
       <div className='flex flex-row'>
         <WebBar/>
         <div className='flex flex-col items-center justify-start gap-6 py-28 px-[380px]'>
@@ -69,4 +70,4 @@ export const Homie = () =>{
     </section>
     )}
 ;
-
+export default Homie;
