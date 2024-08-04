@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 
-export const Technical = () => {
+const Technical = () => {
   return (
     <section className='h-fit bg-white'>
       <div className='flex flex-row justify-between'>
@@ -32,3 +32,4 @@ export const Technical = () => {
 
   )
 };
+export default Technical;
