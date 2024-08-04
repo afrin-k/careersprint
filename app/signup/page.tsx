@@ -64,7 +64,7 @@ export default function Signup() {
     // Add your logic here to handle form submission, like making an API request
 
     // Redirect to login page
-    void router.push("/login");
+    void router.push("/web");
   };
 
   return (

@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image';
 import React from 'react'
 import section1Img from "@/public/section1.svg";
@@ -7,9 +8,14 @@ import section4Img from "@/public/section4.svg";
 import section5Img from "@/public/section5.svg";
 import section6Img from "@/public/section6.svg";
 import section7Img from "@/public/section7.svg";
-
+import { useRouter } from 'next/navigation';
 export const Homie = () =>{ 
+  const router = useRouter();
+  const handleSubmit = () => {
+    void router.push("/web/technicalskills");
+  };
   return( 
+     
     <section className='h-fit bg-white'>
       <div className='flex flex-row'>
         <div className='h-screen w-[300px] border-r-2 border-gray-400 flex flex-col items-center justify-start gap-6 py-28 px-10'>
@@ -22,7 +28,7 @@ export const Homie = () =>{
         </div>
         <div className='flex flex-col items-center justify-start gap-6 py-28 px-10'>
           <div className='section-body'>
-            <button className='section-text'>SECTION 1 : TECHNICAL SKILLS</button>
+            <button className='section-text' onClick={handleSubmit}>SECTION 1 : TECHNICAL SKILLS</button>
             <Image src={section1Img} alt="section1" className='section-img'/>
           </div>
           <div className='section-body'>

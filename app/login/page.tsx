@@ -48,7 +48,7 @@ export default function Login() {
 
       const result = await resp.json();
       if(resp.ok){
-        void router.push("/dashboard");
+        void router.push("/web");
       }
       else{
         alert(result.error)
@@ -64,7 +64,7 @@ export default function Login() {
   };
 
   const handleSubmitSignup = () => {
-    void router.push("/signup");
+    void router.push("/web");
   };
 
   return (
@@ -108,7 +108,7 @@ export default function Login() {
               </div>
             </CardContent>
             <CardFooter className="flex flex-col">
-              <button className="w-full" onClick={handleSubmit}>
+              <button className="w-full" onClick={handleSubmitSignup}>
                 Login
               </button>
             </CardFooter>
