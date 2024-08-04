@@ -20,6 +20,15 @@ export const Homie = () =>{
   const certification = () => {
     void router.push("/web/certifications");
   };
+  const resume = () => {
+    void router.push("/web/resumebuilding");
+  };
+  const interview = () => {
+    void router.push("/web/interviewpreparation");
+  };
+  const softskill= () => {
+    void router.push("/web/softskills");
+  };
   return( 
      
     <section className='h-fit bg-white'>
@@ -38,7 +47,7 @@ export const Homie = () =>{
             <Image src={section1Img} alt="section1" className='section-img'/>
           </div>
           <div className='section-body'>
-            <button className='section-text'>SECTION 2 : SOFT SKILLS</button>
+            <button className='section-text' onClick={softskill}>SECTION 2 : SOFT SKILLS</button>
             <Image src={section2Img} alt="section2" className='section-img'/>
           </div>
           <div className='section-body'>
@@ -46,7 +55,7 @@ export const Homie = () =>{
             <Image src={section3Img} alt="section3" className='section-img'/>
           </div>
           <div className='section-body'>
-            <button className='section-text'>SECTION 4 : INTERVIEW PREPARATION</button>
+            <button className='section-text' onClick={interview}>SECTION 4 : INTERVIEW PREPARATION</button>
             <Image src={section4Img} alt="section4" className='section-img'/>
           </div>
           <div className='section-body'>
@@ -54,7 +63,7 @@ export const Homie = () =>{
             <Image src={section5Img} alt="section5" className='section-img'/>
           </div>
           <div className='section-body'>
-            <button className='section-text'>SECTION 6 : RESUME BUILDING</button>
+            <button className='section-text' onClick={resume}>SECTION 6 : RESUME BUILDING</button>
             <Image src={section6Img} alt="section6" className='section-img'/>
           </div>
           <div className='section-body'>
