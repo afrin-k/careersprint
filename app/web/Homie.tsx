@@ -11,8 +11,14 @@ import section7Img from "@/public/section7.svg";
 import { useRouter } from 'next/navigation';
 export const Homie = () =>{ 
   const router = useRouter();
-  const handleSubmit = () => {
+  const technical = () => {
     void router.push("/web/technicalskills");
+  };
+  const network = () => {
+    void router.push("/web/networking");
+  };
+  const certification = () => {
+    void router.push("/web/certifications");
   };
   return( 
      
@@ -28,7 +34,7 @@ export const Homie = () =>{
         </div>
         <div className='flex flex-col items-center justify-start gap-6 py-28 px-10'>
           <div className='section-body'>
-            <button className='section-text' onClick={handleSubmit}>SECTION 1 : TECHNICAL SKILLS</button>
+            <button className='section-text' onClick={technical}>SECTION 1 : TECHNICAL SKILLS</button>
             <Image src={section1Img} alt="section1" className='section-img'/>
           </div>
           <div className='section-body'>
@@ -44,7 +50,7 @@ export const Homie = () =>{
             <Image src={section4Img} alt="section4" className='section-img'/>
           </div>
           <div className='section-body'>
-            <button className='section-text'>SECTION 5 : CERTIFICATIONS</button>
+            <button className='section-text' onClick={certification}>SECTION 5 : CERTIFICATIONS</button>
             <Image src={section5Img} alt="section5" className='section-img'/>
           </div>
           <div className='section-body'>
@@ -52,7 +58,7 @@ export const Homie = () =>{
             <Image src={section6Img} alt="section6" className='section-img'/>
           </div>
           <div className='section-body'>
-            <button className='section-text'>SECTION 7 : NETWORKING</button>
+            <button className='section-text' onClick={network}>SECTION 7 : NETWORKING</button>
             <Image src={section7Img} alt="section" className='section-img'/>
           </div>
         </div>

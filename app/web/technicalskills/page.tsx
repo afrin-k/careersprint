@@ -35,7 +35,7 @@ const Technical: React.FC = () => {
   return (
     <section className='min-h-screen bg-white'>
       <div className='flex'>
-        {/* Sidebar */}
+        
         <div className='h-screen w-[250px] border-r-2 border-gray-300 flex flex-col items-center justify-start gap-6 py-16 px-6'>
           <button className='text-2xl font-semibold text-left text-[#ff3131] font-abeezee'>
             CareerSprint
@@ -47,10 +47,10 @@ const Technical: React.FC = () => {
           <button className='home-btn'>MORE</button>
         </div>
 
-        {/* Main Content */}
-        <div className='flex-grow flex flex-col py-16 px-8'>
-          {/* Section Header */}
-          <div className='flex items-center'>
+        
+        <div className='flex-grow flex flex-col items-center py-16 px-8'>
+          
+          <div className='flex items-center mb-8'>
             <button className='text-2xl text-[#ff3131] mr-4'>{'<'} </button>
             <div className='bg-gradient-to-r from-[#ff3131] to-[#ff914d] rounded-full py-2 px-8'>
               <h1 className='text-white text-lg font-semibold'>
@@ -59,13 +59,13 @@ const Technical: React.FC = () => {
             </div>
           </div>
 
-          {/* Tasks List */}
-          <div className='mt-8 space-y-6'>
+          
+          <div className='space-y-6 w-full max-w-lg mx-auto'>
             <div>
-              <h2 className='text-lg font-bold text-[#ff3131]'>PROGRAMMING PROFICIENCY</h2>
+              <h2 className='text-lg font-bold text-[#ff3131] text-left'>PROGRAMMING PROFICIENCY</h2>
               <ul className='list-none space-y-1'>
                 {programmingTasks.map((task, index) => (
-                  <li key={index}>
+                  <li key={index} className='text-left'>
                     <input
                       type='checkbox'
                       checked={task.completed}
@@ -77,10 +77,10 @@ const Technical: React.FC = () => {
             </div>
 
             <div>
-              <h2 className='text-lg font-bold text-[#ff3131]'>WEB DEVELOPMENT BASICS</h2>
+              <h2 className='text-lg font-bold text-[#ff3131] text-left'>WEB DEVELOPMENT BASICS</h2>
               <ul className='list-none space-y-1'>
                 {webDevTasks.map((task, index) => (
-                  <li key={index}>
+                  <li key={index} className='text-left'>
                     <input
                       type='checkbox'
                       checked={task.completed}
@@ -92,10 +92,10 @@ const Technical: React.FC = () => {
             </div>
 
             <div>
-              <h2 className='text-lg font-bold text-[#ff3131]'>DATA STRUCTURES AND ALGORITHMS (DSA)</h2>
+              <h2 className='text-lg font-bold text-[#ff3131] text-left'>DATA STRUCTURES AND ALGORITHMS (DSA)</h2>
               <ul className='list-none space-y-1'>
                 {dsaTasks.map((task, index) => (
-                  <li key={index}>
+                  <li key={index} className='text-left'>
                     <input
                       type='checkbox'
                       checked={task.completed}
@@ -108,7 +108,7 @@ const Technical: React.FC = () => {
           </div>
         </div>
 
-        {/* Right Sidebar */}
+        
         <div className='flex flex-col items-center justify-center w-[300px] border-l-2 border-gray-300'>
           <div className='bg-white shadow-md rounded-md p-4'>
             <div className='text-lg text-[#ff3131] font-bold'>🔥 23 DAYS</div>
