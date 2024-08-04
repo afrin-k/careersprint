@@ -9,7 +9,7 @@ const Profile: React.FC = () => {
         <div className="relative">
           <div className="bg-gray-200 h-48 rounded-t-lg"></div>
           <div className="absolute top-20 left-1/2 transform -translate-x-1/2">
-            <div className="h-24 w-24 bg-orange-500 rounded-full flex items-center justify-center">
+            <div className="h-24 w-24 bg-[#ff3131] rounded-full flex items-center justify-center">
               <div className="bg-white h-20 w-20 rounded-full"></div>
             </div>
           </div>
@@ -25,14 +25,14 @@ const Profile: React.FC = () => {
             <span className="text-red-500">VIEW PROGRESS DETAILS</span>
           </div>
           <div className="mt-2 bg-gray-200 h-4 rounded-full overflow-hidden">
-            <div className="bg-orange-500 h-full rounded-full" style={{ width: '40%' }}></div>
+            <div className="bg-gradient-to-r from-[#ff3131] to-[#ff914d] h-full rounded-full" style={{ width: '40%' }}></div>
           </div>
         </div>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <span className="px-4 py-2 bg-gray-200 rounded-full">/linkedin/username</span>
-          <span className="px-4 py-2 bg-gray-200 rounded-full">/leetcode/username</span>
-          <span className="px-4 py-2 bg-gray-200 rounded-full">/coursera/account</span>
-          <span className="px-4 py-2 bg-gray-200 rounded-full">/other/account</span>
+          <div className="px-4 py-2 bg-gray-200 rounded-full hover:border hover:border-red-600">/linkedin/username</div>
+          <span className="px-4 py-2 bg-gray-200 rounded-full hover:border hover:border-red-600">/leetcode/username</span>
+          <span className="px-4 py-2 bg-gray-200 rounded-full hover:border hover:border-red-600">/coursera/account</span>
+          <span className="px-4 py-2 bg-gray-200 rounded-full hover:border hover:border-red-600">/other/account</span>
         </div>
         <div className="mt-8 text-center">
           <p className="text-gray-600">CURRENT STATUS EG. “FOCUSING ON TECHNICAL SKILLS” OR “IMPROVING NETWORK”</p>
