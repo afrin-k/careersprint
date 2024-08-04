@@ -1,6 +1,7 @@
 "use client"
 import Image from 'next/image';
 import React from 'react'
+import { WebBar } from './WebBar';
 import section1Img from "@/public/section1.svg";
 import section2Img from "@/public/section2.svg";
 import section3Img from "@/public/section3.svg";
@@ -33,15 +34,8 @@ export const Homie = () =>{
      
     <section className='h-fit bg-white'>
       <div className='flex flex-row'>
-        <div className='h-screen w-[300px] border-r-2 border-gray-400 flex flex-col items-center justify-start gap-6 py-28 px-10'>
-          <button className='text-lg font-semibold text-left text-[#ff3131] font-abeezee'>CAREERSPRINT</button>
-          <button className='home-btn'>HOME</button>
-          <button className='home-btn'>SECTIONS</button>
-          <button className='home-btn'>PROGRESS</button>
-          <button className='home-btn'>PROFILE</button>
-          <button className='home-btn'>MORE</button>
-        </div>
-        <div className='flex flex-col items-center justify-start gap-6 py-28 px-10'>
+        <WebBar/>
+        <div className='flex flex-col items-center justify-start gap-6 py-28 px-[380px]'>
           <div className='section-body'>
             <button className='section-text' onClick={technical}>SECTION 1 : TECHNICAL SKILLS</button>
             <Image src={section1Img} alt="section1" className='section-img'/>

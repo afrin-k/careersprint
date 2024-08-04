@@ -87,7 +87,7 @@
 
 
     .home-btn{
-      @apply text-lg font-bold font-abeezee text-black;
+      @apply text-lg font-bold font-abeezee text-black hover:text-[#ff3131];
     }
 
 
@@ -105,5 +105,23 @@
       @apply z-10 h-[200px] w-[200px];
     }
 
+    .section-headings{
+      @apply font-abeezee text-[#ff3131] font-bold text-lg text-left py-7;
+    }
 
+    .ul-styles{
+      @apply list-none space-y-2 pl-8 w-[600px];
+    }
+
+    .checkbox-styles{
+      @apply appearance-none border-2 border-[#ff3131] rounded-sm w-4 h-4 checked:bg-[#ff3131] checked:border-transparent mr-4;
+    }
+    
+    .ul-text{
+      @apply font-montserrat tracking-tight text-left;
+    }
+ 
   }
+
+
+
